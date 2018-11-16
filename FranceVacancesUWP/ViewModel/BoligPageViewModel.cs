@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FranceVacancesUWP.ViewModel
 {
-    class CreateHouseViewModel
+    class BoligPageViewModel
     {
     }
 }

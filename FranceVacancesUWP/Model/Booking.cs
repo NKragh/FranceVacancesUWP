@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FranceVacances.Model
+namespace FranceVacancesUWP.Model
 {
     class Booking
     {
-        private String name;
-        private DateTime birthdate;
-        private String phoneNumber;
-        private String email;
-        private String gender;
+        private String _name;
+        private DateTime _birthdate;
+        private String _phoneNumber;
+        private String _email;
+        private String _gender;
 
-        public Booking()
+        public Booking(string name, DateTime birthdate, string phoneNumber, string email, string gender)
         {
-            
+            _name = name;
+            _birthdate = birthdate;
+            _phoneNumber = phoneNumber;
+            _email = email;
+            _gender = gender;
         }
-
-        public void GetCustomerInfo()
-        {
-            //TODO: Get customerinfo from Customer object.
-        }
+        
     }
 }

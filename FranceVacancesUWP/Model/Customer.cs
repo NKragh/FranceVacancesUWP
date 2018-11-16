@@ -4,27 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FranceVacances.Model
+namespace FranceVacancesUWP.Model
 {
     class Customer
     {
-        private String name;
-        private String phoneNumber;
-        private String email;
-        private String password;
+        private String _name;
+        private String _phoneNumber;
+        private String _email;
+        private String _password;
 
-        public Customer(String Name, String PhoneNumber, String Email, String Password)
+        public Customer(String name, String phoneNumber, String email, String Password)
         {
-            name = Name;
-            phoneNumber = PhoneNumber;
-            email = Email;
-            password = Password;
+            _name = name;
+            _phoneNumber = phoneNumber;
+            _email = email;
+            _password = Password;
         }
-
-        public string Name
-        {
-            get { return name; }
-        }
-        
     }
 }

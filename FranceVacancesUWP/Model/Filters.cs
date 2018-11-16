@@ -1,26 +1,33 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FranceVacances.Model
+namespace FranceVacancesUWP.Model
 {
     class Filters
     {
-        List<String> facilities = new List<string>();
-        List<String> houseType = new List<string>();
-        private double priceFrom;
-        private double priceTo;
-        private int ratingOfficial;
-        private int ratingGuest;
-        private bool travelFood;
-        private string travelClass;
-        private int roomAmount;
+        List<String> _facilities = new List<string>();
+        List<String> _houseType = new List<string>();
+        private IEnumerable<int> _priceRange = Enumerable.Range(0, 10000);
+        private int _ratingOfficial;
+        private int _ratingGuest;
+        private bool _travelFood;
+        private string _travelClass;
+        private int _roomAmount;
 
-        public Filters()
+        public Filters(IEnumerable<int> excludePriceRange, List<string> facilities, List<string> houseType, int ratingOfficial, int ratingGuest, bool travelFood, string travelClass, int roomAmount)
         {
-            //TODO: Checkliste i UI skal ændre på liste med filtrene
+            _priceRange = _priceRange.Except(excludePriceRange);
+            _facilities = facilities;
+            _houseType = houseType;
+            _ratingOfficial = ratingOfficial;
+            _ratingGuest = ratingGuest;
+            _travelFood = travelFood;
+            _travelClass = travelClass;
+            _roomAmount = roomAmount;
         }
 
         public void ApplyFilter()

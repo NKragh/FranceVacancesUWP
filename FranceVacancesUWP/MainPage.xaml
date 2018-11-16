@@ -5,10 +5,55 @@
     xmlns:local="using:FranceVacancesUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:FranceVacancesUWP"
     mc:Ignorable="d"
+    
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <!--BACKGROUND-->
+        <Image Source="Images/Paristower.jpg" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="4"/>
+
+        <!--HEADER-->
+        <!--TODO: Lav tekst om så det tilpasser sig størrelse på vind(r)ue.-->
+        <TextBlock x:Name="FVLogo" Text="France Vacances" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Bold" />
+
+        <!--NAVBAR-->
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button Content="Go to CreateHouse" Click="HyperlinkButton_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!--Frame-->
+        <!--The pages load into this container-->
+        <Frame x:Name="Index"/>
+
+        <!--SØGEFUNKTION-->
+        <TextBox x:Name="travelType" Grid.Row="2" Grid.Column="0" Text="Skriv din rejsetype her"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Height="25"/>
+        <TextBox x:Name="airportTo" Grid.Row="2" Grid.Column="1" Text="Afrejse" VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+        <TextBox x:Name="airportFrom" Grid.Row="2" Grid.Column="2" Text="Destination" VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+        <DatePicker x:Name="dateInput" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center"
+                HorizontalAlignment="Center" Width="100" Height="30" />
+        <TextBox x:Name="numberOfTravelers" Grid.Row="2" Grid.Column="4" Text="Vælg antal rejsende"
+                VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <Button Grid.Row="2" Grid.Column="5" Width="100" Height="40" VerticalAlignment="Center"
+                HorizontalAlignment="Center" Content="Søg" Click="SearchButton_Click" />
     </Grid>
 </Page>

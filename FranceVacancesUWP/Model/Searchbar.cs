@@ -1,26 +1,26 @@
 ﻿using System;
 
-namespace FranceVacances.Model
+namespace FranceVacancesUWP.Model
 {
     class Searchbar
     {
-        private String airportTo;
-        private String airportFrom;
-        private DateTime? dateFrom;
-        private DateTime? dateTo;
-        private int people;
-        private string travelType;
+        private String _airportTo;
+        private String _airportFrom;
+        private DateTime? _dateFrom;
+        private DateTime? _dateTo;
+        private int _people;
+        private string _travelType;
 
         public Searchbar(string travelType, string airportFrom, string airportTo, DateTime? dateInput, int numberOfTravelers)
         {
             //Grib værdier fra UI, hvor brugeren skriver de værdier der skal søges efter, og sæt dem lige med properties.
 
-            this.travelType = travelType;
-            this.airportFrom = airportFrom;
-            this.airportTo = airportTo;
-            this.dateFrom = dateInput;
-            this.dateTo = dateInput;
-            this.people = numberOfTravelers;
+            _travelType = travelType;
+            _airportFrom = airportFrom;
+            _airportTo = airportTo;
+            _dateFrom = dateInput;
+            _dateTo = dateInput;
+            _people = numberOfTravelers;
         }
 
         public void MakeSearch()
@@ -28,11 +28,6 @@ namespace FranceVacances.Model
             //TODO: Implementer; Skal kunne display de boliger der matcher de valgte properties
 
             
-        }
-
-        public void printValues()
-        {
-
         }
     }
 }

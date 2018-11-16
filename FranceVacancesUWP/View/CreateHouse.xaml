@@ -1,28 +1,44 @@
-<Page x:Class="FranceVacances.View.CreateHouse"
+<Page x:Class="FranceVacancesUWP.View.CreateHouse"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:FranceVacances.View"
-      mc:Ignorable="d"
-      Title="CreateHouse">
+      xmlns:model="using:FranceVacancesUWP.Model"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <model:House/>
+    </Page.DataContext>
+
+    <Page.Background>
+        <ImageBrush ImageSource="../Images/ParisChurchWithGoldHat.jpg" />
+    </Page.Background>
+
+    <Page.Resources>
+        <Style x:Key="FeatureStyle" TargetType="TextBox">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
-        <!--FILTERFUNKTION-->
-        <ListBox Grid.Row="3" Grid.Column="0" Background="Transparent">
-            <CheckBox Content="Internet"/>
-            <CheckBox Content="Koekken"/>
-            <CheckBox Content="Internet"/>
-            <CheckBox Content="Internet"/>
-        </ListBox>
-
-        <!--BOLIGOVERSIGT-->
-        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5">
-            <ListView x:Name="BoligListView">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="500">
+            <StackPanel>
+                <TextBox x:Name="adresseBox" PlaceholderText="Indtast adressen" TextWrapping="Wrap" Header="Adresse" Style="{StaticResource FeatureStyle}" />
+                <TextBox x:Name="priceBox" PlaceholderText="Indtast prisen pr. dag" Header="Pris" Style="{StaticResource FeatureStyle}"/>
+                <TextBox x:Name="roomsBox" PlaceholderText="Indtast antallet af værelser" Header="Værelser" Style="{StaticResource FeatureStyle}"/>
+                <TextBox x:Name="officialBox" PlaceholderText="Indtast de officielle antal stjerner" Header="Rating" Style="{StaticResource FeatureStyle}"/>
+            </StackPanel>
+            <!--<TextBox x:Name="typeBox" PlaceholderText="Indtast typen af din bolig" />-->
+            <ComboBox x:Name="typeBox" Header="Type" ItemsSource="{x:Bind types}" HorizontalAlignment="Left" Width="200" Margin="10"/>
+            <!--FACILITIES-->
+            <ListView Background="Transparent" HorizontalAlignment="Left" Margin="10" Header="Features">
+                <CheckBox Content="Internet"/>
+                <CheckBox Content="Koekken"/>
+                <CheckBox Content="Internet"/>
+                <CheckBox Content="Internet"/>
             </ListView>
         </StackPanel>
     </Grid>
