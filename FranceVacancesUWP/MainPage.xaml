@@ -40,10 +40,6 @@
             <Button Content="Go to CreateHouse" Click="HyperlinkButton_Click" HorizontalAlignment="Center"/>
         </StackPanel>
 
-        <!--Frame-->
-        <!--The pages load into this container-->
-        <Frame x:Name="Index" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
-
         <!--SØGEFUNKTION-->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="5" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <TextBox x:Name="travelType" Grid.Row="2" Grid.Column="0" Text="Skriv din rejsetype her"
@@ -60,11 +56,7 @@
                     HorizontalAlignment="Center" Content="Søg" Click="SearchButton_Click" />
         </StackPanel>
 
-        <!--BOLIGOVERSIGT-->
-        <!--TODO: Vis boliger. Til at starte med skal de senest tilføjede boliger vises-->
-
         <!--FILTRE-->
-
         <ListView Grid.Row="3" Grid.Column="0" Margin="10" Header="Features">
             <!--TODO: Implementér datatemplate/itemtemplate-->
             <CheckBox Content="Internet"/>
@@ -72,5 +64,17 @@
             <CheckBox Content="Internet"/>
             <CheckBox Content="Internet"/>
         </ListView>
+
+        <!--BOLIGOVERSIGT-->
+        <!--TODO: Vis boliger. Til at starte med skal de senest tilføjede boliger vises-->
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5"> 
+            <ListBox> 
+                <ListBoxItem Content="Test"/> 
+                <ListBoxItem Content="Test"/> 
+                <ListBoxItem Content="Test"/> 
+                <ListBoxItem Content="Test"/> 
+            </ListBox> 
+         </StackPanel> 
+
     </Grid>
 </Page>

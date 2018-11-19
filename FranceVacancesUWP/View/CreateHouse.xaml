@@ -41,6 +41,7 @@
                 <CheckBox Content="Internet"/>
                 <CheckBox Content="Internet"/>
             </ListView>
+            <Button Content="Opret bolig" Background="DarkGray"/>
         </StackPanel>
     </Grid>
 </Page>

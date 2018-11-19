@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FranceVacancesUWP.Model;
 using FranceVacancesUWP.View;
 
 namespace FranceVacancesUWP
@@ -36,6 +37,12 @@ namespace FranceVacancesUWP
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CreateHouse));
+        }
+
+        private void FilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Filters filter = new Filters();
+            //filter.ApplyFilter();
         }
     }
 }
