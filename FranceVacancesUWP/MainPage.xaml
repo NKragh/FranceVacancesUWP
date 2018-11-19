@@ -11,7 +11,7 @@
     mc:Ignorable="d">
 
     <Page.Background>
-        <ImageBrush ImageSource="../Images/Paristower.jpg"/>
+        <ImageBrush ImageSource="../Images/EiffelTowerV1.jpg"/>
     </Page.Background>
 
     <Grid>

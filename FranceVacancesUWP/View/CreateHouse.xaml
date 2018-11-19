@@ -11,7 +11,7 @@
     </Page.DataContext>
 
     <Page.Background>
-        <ImageBrush ImageSource="../Images/ParisChurchWithGoldHat.jpg" />
+        <ImageBrush ImageSource="../Images/ParisChurchV1.jpg" />
     </Page.Background>
 
     <Page.Resources>
