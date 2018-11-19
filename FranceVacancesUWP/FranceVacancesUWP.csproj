@@ -128,6 +128,8 @@
     <None Include="FranceVacancesUWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\EiffelTowerV1.jpg" />
+    <Content Include="Images\ParisChurchV1.jpg" />
     <Content Include="Images\ParisChurchWithGoldHat.jpg" />
     <Content Include="Images\Paristower.jpg" />
     <Content Include="Properties\Default.rd.xml" />
