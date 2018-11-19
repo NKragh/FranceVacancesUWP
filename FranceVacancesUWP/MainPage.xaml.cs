@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -43,6 +44,12 @@ namespace FranceVacancesUWP
         {
             //Filters filter = new Filters();
             //filter.ApplyFilter();
+        }
+
+
+        private void HyperlinkButton2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Index));
         }
     }
 }

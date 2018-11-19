@@ -10,6 +10,10 @@
     xmlns:model="using:FranceVacancesUWP.Model"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <model:House/>
+    </Page.DataContext>
+
     <Page.Background>
         <ImageBrush ImageSource="../Images/EiffelTowerV1.jpg"/>
     </Page.Background>
@@ -36,8 +40,9 @@
         <TextBlock x:Name="FVLogo" Text="France Vacances" Grid.Column="2" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Bold" Margin="0,0,0,0" />
 
         <!--NAVBAR-->
-        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Orientation="Horizontal">
             <Button Content="Go to CreateHouse" Click="HyperlinkButton_Click" HorizontalAlignment="Center"/>
+            <Button Content="Go to Index" Click="HyperlinkButton2_Click" HorizontalAlignment="Center"/>
         </StackPanel>
 
         <!--SØGEFUNKTION-->
@@ -67,14 +72,15 @@
 
         <!--BOLIGOVERSIGT-->
         <!--TODO: Vis boliger. Til at starte med skal de senest tilføjede boliger vises-->
-        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5"> 
-            <ListBox> 
-                <ListBoxItem Content="Test"/> 
-                <ListBoxItem Content="Test"/> 
-                <ListBoxItem Content="Test"/> 
-                <ListBoxItem Content="Test"/> 
-            </ListBox> 
-         </StackPanel> 
+        <!--<StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="6"> 
+            <ListView ItemsSource="{Binding House.HouseList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Location}" Height="50" Width="100"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+         </StackPanel>--> 
 
     </Grid>
 </Page>
