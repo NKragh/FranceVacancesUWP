@@ -23,6 +23,7 @@ namespace FranceVacancesUWP.Model
             {"Aircondition", false},
             {"Kitchen", false},
             {"Elevator", false},
+            {"Toaster", false},
         };
         #endregion
 

@@ -22,29 +22,30 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="160*"/>
         </Grid.ColumnDefinitions>
 
         <!--HEADER-->
         <!--TODO: Lav tekst om så det tilpasser sig størrelse på vind(r)ue.-->
-        <TextBlock x:Name="FVLogo" Text="France Vacances" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Bold" />
+        <TextBlock x:Name="FVLogo" Text="France Vacances" Grid.Column="2" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center"  FontWeight="Bold" Margin="0,0,0,0" />
 
         <!--NAVBAR-->
-        <StackPanel Grid.Row="1" Grid.Column="0">
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Button Content="Go to CreateHouse" Click="HyperlinkButton_Click" HorizontalAlignment="Center"/>
         </StackPanel>
 
         <!--Frame-->
         <!--The pages load into this container-->
-        <Frame x:Name="Index"/>
+        <Frame x:Name="Index" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
 
         <!--SØGEFUNKTION-->
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="6" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="5" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <TextBox x:Name="travelType" Grid.Row="2" Grid.Column="0" Text="Skriv din rejsetype her"
                     VerticalAlignment="Center" HorizontalAlignment="Center" Height="25"/>
             <TextBox x:Name="airportTo" Grid.Row="2" Grid.Column="1" Text="Afrejse" VerticalAlignment="Center"
@@ -58,5 +59,18 @@
             <Button Grid.Row="2" Grid.Column="5" Width="100" Height="40" VerticalAlignment="Center"
                     HorizontalAlignment="Center" Content="Søg" Click="SearchButton_Click" />
         </StackPanel>
+
+        <!--BOLIGOVERSIGT-->
+        <!--TODO: Vis boliger. Til at starte med skal de senest tilføjede boliger vises-->
+
+        <!--FILTRE-->
+
+        <ListView Grid.Row="3" Grid.Column="0" Margin="10" Header="Features">
+            <!--TODO: Implementér datatemplate/itemtemplate-->
+            <CheckBox Content="Internet"/>
+            <CheckBox Content="Koekken"/>
+            <CheckBox Content="Internet"/>
+            <CheckBox Content="Internet"/>
+        </ListView>
     </Grid>
 </Page>

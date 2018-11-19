@@ -35,6 +35,7 @@
             <ComboBox x:Name="typeBox" Header="Type" ItemsSource="{x:Bind types}" HorizontalAlignment="Left" Width="200" Margin="10"/>
             <!--FACILITIES-->
             <ListView Background="Transparent" HorizontalAlignment="Left" Margin="10" Header="Features">
+                <!--TODO: Implementér datatemplate/itemtemplate-->
                 <CheckBox Content="Internet"/>
                 <CheckBox Content="Koekken"/>
                 <CheckBox Content="Internet"/>
